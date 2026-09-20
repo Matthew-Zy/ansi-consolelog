@@ -1,7 +1,3 @@
-// I think I might actually make these into an NPM package
-// No, npm does not have enough packages that do one thing poorly 
-// We need to flood the npm registry with even more single use packages
-
 export { ansiConsoleLog, ansiToCssFormat }
 export default ansiConsoleLog
 
@@ -17,27 +13,6 @@ function ansiConsoleLog(ansiString: string) {
     }
 
 }
-
-const BROWSER_ENGINES = ["Safari", "Firefox", "Chromium", "Unknown"]
-type BrowserEngine = typeof BROWSER_ENGINES[number]
-
-function getBrowserEngine(): BrowserEngine {
-    const userAgent = navigator.userAgent
-
-    if (userAgent.includes("Firefox")) {
-        return "Firefox"
-    } 
-    else if (userAgent.includes("Chrome")) {
-        return "Chromium"
-    } 
-    else if (userAgent.includes("Safari")) {
-        return "Safari"
-    } 
-    
-    return "Unknown"
-}
-
-
 
 function ansiToCssFormat(ansiString: string): [string, string[]] {
     // Regex to match ANSI 24-bit foreground/background colors and resets
@@ -89,4 +64,23 @@ function ansiToCssFormat(ansiString: string): [string, string[]] {
     const formatString = cssParts.join('%c')
     
     return [formatString, styles]
+}
+
+const BROWSER_ENGINES = ["Safari", "Firefox", "Chromium", "Unknown"]
+type BrowserEngine = typeof BROWSER_ENGINES[number]
+
+function getBrowserEngine(): BrowserEngine {
+    const userAgent = navigator.userAgent
+
+    if (userAgent.includes("Firefox")) {
+        return "Firefox"
+    } 
+    else if (userAgent.includes("Chrome")) {
+        return "Chromium"
+    } 
+    else if (userAgent.includes("Safari")) {
+        return "Safari"
+    } 
+    
+    return "Unknown"
 }
