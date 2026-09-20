@@ -1,0 +1,33 @@
+{
+  "name": "@matthew-zy/ansi-consolelog",
+  "version": "1.0.0",
+  "description": "functions to print text with ansi escape colors to the browser console",
+  "keywords": [
+    "Ansi",
+    "Escape",
+    "Console"
+  ],
+  "homepage": "https://github.com/Matthew-Zy/ansi-consolelog#readme",
+  "bugs": {
+    "url": "https://github.com/Matthew-Zy/ansi-consolelog/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Matthew-Zy/ansi-consolelog.git"
+  },
+  "author": "matthew-zy",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "typescript": "^7.0.2"
+  }
+}
